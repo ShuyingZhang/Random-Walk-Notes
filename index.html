@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Walk - Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    
+    <main class="app-container">
+        <header class="app-header">
+            <h1>Random Walk</h1>
+            <p class="subtitle">Wander through your thoughts</p>
+        </header>
+
+        <section class="stage-area" id="stageArea">
+            <div class="empty-state" id="emptyState">
+                <div class="icon">✨</div>
+                <p>Import your notes to begin your journey.</p>
+            </div>
+            <div class="note-card hidden" id="noteCard">
+                <div class="note-content" id="noteContent"></div>
+                <div class="note-meta" id="noteMeta"></div>
+            </div>
+        </section>
+
+        <div class="controls">
+            <button id="walkBtn" class="btn primary-btn" disabled>
+                <span class="btn-text">Take a Step</span>
+                <span class="btn-icon">🎲</span>
+            </button>
+        </div>
+
+        <section class="library-panel">
+            <div class="panel-header">
+                <h2>Library</h2>
+                <span id="noteCount" class="badge">0 notes</span>
+            </div>
+            
+            <div class="input-group">
+                <textarea id="quickAddInput" placeholder="Paste a quick thought here..."></textarea>
+                <button id="addNoteBtn" class="btn secondary-btn">Add</button>
+            </div>
+
+            <div class="file-import">
+                <label for="fileInput" class="file-label">
+                    <span>Import .txt / .md files</span>
+                </label>
+                <input type="file" id="fileInput" accept=".txt,.md" multiple>
+            </div>
+
+            <div class="notes-list" id="notesList">
+                <!-- List items will be injected here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
